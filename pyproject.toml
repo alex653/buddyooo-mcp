@@ -1,0 +1,15 @@
+[project]
+name = "buddyooo-mcp"
+version = "1.0.0"
+description = "Open MCP server for the buddyooo.ru electrical equipment catalog (82k+ products, neural search, prices, stock)"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+dependencies = [
+    "mcp>=1.0,<2",
+    "httpx",
+]
+
+[project.urls]
+Homepage = "https://buddyooo.ru/mcp"
+Repository = "https://github.com/alex653/buddyooo-mcp"

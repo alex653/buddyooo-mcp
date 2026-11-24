@@ -1,0 +1,17 @@
+# Smithery configuration: https://smithery.ai/docs
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    properties:
+      buddyUrl:
+        type: string
+        title: Buddyooo base URL
+        default: https://buddyooo.ru
+        description: Base URL of the catalog API (change only for testing)
+  commandFunction: |-
+    (config) => ({
+      command: 'python3',
+      args: ['mcp_server.py'],
+      env: config.buddyUrl ? { BUDDY_BASE_URL: config.buddyUrl } : {}
+    })
